@@ -26,5 +26,24 @@ public class stockAccountManagmentServiceimpl implements stockAccountManagmentSe
 			System.out.println(stock);
 		}
 	}
-}		
+	public void displayStocks() {
+        for(Stocks stocks : stockList)
+        {
+            System.out.println(stocks);
+        }
+    }
+	public void calculateValueOfStocks()
+	{
+		double totalValue=0;
+		for(Stocks stock:stockList)
+		{
+			double valueofstock = stock.getNoOfShares()*stock.getSharePrice();
+			System.out.println("value of stock"+stock.getStockNames()+"is"+valueofstock);
+			totalValue = totalValue + valueofstock;
+		}
+		System.out.println("total stock value is:"+totalValue);
+	}
+}
+
+
 	

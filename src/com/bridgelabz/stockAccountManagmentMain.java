@@ -25,5 +25,7 @@ public class stockAccountManagmentMain {
 	}
 	stockService.getStockDetails();
 	scanner.close();
+	stockService.displayStocks();
+	stockService.calculateValueOfStocks();
     }
 }
